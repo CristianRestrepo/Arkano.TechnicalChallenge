@@ -1,4 +1,16 @@
 <b>Proyecto Arkano.challenge</b>
+<b>Detalles del proyecto</b>
+<div>
+ <p>El proyecto <b>Arkano.Transaction.Api</b> es un Web API implementado con clean architecture y el patrón CQRS. Se encarga de creación de las transacciones en base de datos en un estado <b>Pending</b> que posteriormente son enviadas al topico <b>Transactions</b> del bus. Cuenta con un <b>BackgroudService</b> implementado en la capa de infraestructura que se encarga de consumir y procesar los mensajes entregados al topico <b>Processed-Transactions</b> desde el componente <b>Arkano.Antifraud.Worker</b> y actualizar la transacción en base de datos
+</div>
+<div>
+  <p>El proyecto <b>Arkano.Antifraud.Worker</b> es un worker que implementa la interfaz IHostedService, también implementado con clean architecture y el patrón CQRS. Este proyecto contiene un backgroundService que consume el topico <b>Transactions</b> del bus y procesa la lógica de validación sobre las transacciones creadas en el proyecto <b>Arkano.Transaction.Api</b> y determina si se rechazan o se aprueban, el resultado de esta validación es enviado al topico <b>Processed-Transactions</b> para que el proyecto <b>Arkano.Transaction.Api</b> actualice las transacciones en base de datos.</p>
+</div>
+
+<b>Arquitectura del proyecto</b>
+
+<img>![Arquitectura drawio](https://github.com/user-attachments/assets/ff3b0ece-2542-4c2d-80f5-792326ef71f0)</img>
+
 
 <b>Prerequisitos:</b>
 - Docker
@@ -22,16 +34,9 @@
 
 - Si se desea acceder al swagger del proyecto ingresar al navegador a la URL: <b>http://localhost:5158/swagger/index.html</b>
   
-<b>Arquitectura del proyecto</b>
-
-<img>![Arquitectura Basica drawio](https://github.com/user-attachments/assets/17b7f192-35cd-46c1-bcbd-a612d4d22104)</img>
 
 
-<b>Detalles del proyecto</b>
-<div>
-  <p>El proyecto <b>Arkano.Transaction.Api</b> es un Web API implementado con Clean Arquitecture y el patrón CQRS. Cuenta con un backgroundService en la capa de infraestructura que sirve como consumidor del bus.</p>
-</div>
-<div>
-  <p>El proyecto <b>Arkano.Antifraud.Worker</b> es un worker que implementa la interfaz IHostedService, tambien implementado con Clean Arquitecture y el patrón CQRS.</p> 
-</div>
+
+
+
 
