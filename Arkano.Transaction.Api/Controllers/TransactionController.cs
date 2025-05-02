@@ -27,13 +27,13 @@ namespace Arkano.Transaction.Api.Controllers
         [HttpGet]
         [Route("GetTransactionByIdOrDate")]
         [ProducesResponseType(typeof(List<TransactionDto?>), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> GetTransaction([FromQuery] GetTransactionQuery Query)
         {
             var transaction = await _mediator.Send(Query);
             if (transaction == null || !transaction.Any())
             {
-                return NotFound();
+                return NoContent();
             }
 
             return Ok(transaction);
