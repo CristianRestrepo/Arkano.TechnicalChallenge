@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transaction", "Transaction", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Antifraud", "Antifraud", "{945404B8-2D89-412C-B3BE-604782523DF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Transaction.Application", "Arkano.Application\Arkano.Transaction.Application.csproj", "{56C98EDB-444B-436E-A0E2-65CD1B63A72E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Transaction.Domain", "Arkano.Transaction.Domain\Arkano.Transaction.Domain.csproj", "{3702C387-9E26-4AAA-BC35-0B243F7B7A8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Transaction.Api", "Arkano.Transaction.Api\Arkano.Transaction.Api.csproj", "{7E372185-9ED9-003E-6399-958B08A0E108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Transaction.Infrastructure", "Arkano.Transaction.Infrastructure\Arkano.Transaction.Infrastructure.csproj", "{78AC287B-D34F-7548-6D62-CB7BDF5663AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{AD59AAEF-143B-4E23-8233-6063D8D9C6F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Common", "Arkano.Entities\Arkano.Common.csproj", "{01178C85-771A-4E8F-9090-CBFAD84C2643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Antifraud.Application", "Arkano.Antifraud.Application\Arkano.Antifraud.Application.csproj", "{506712F8-7C55-498E-B735-9125BF7740F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Antifraud.Infrastructure", "Arkano.Antifraud.Infraestructure\Arkano.Antifraud.Infrastructure.csproj", "{2058C092-B208-4B01-91DA-6AC7F5F4D2C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Antifraud.Domain", "Arkano.Antifraud.Domain\Arkano.Antifraud.Domain.csproj", "{76DC5E6D-CF20-4154-8AC9-434EEF8E8296}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Antifraud.Worker", "Arkano.Antifraud.Worker\Arkano.Antifraud.Worker.csproj", "{739F99BD-9F5B-BBDE-BB01-B3D037F44B1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56C98EDB-444B-436E-A0E2-65CD1B63A72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C98EDB-444B-436E-A0E2-65CD1B63A72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C98EDB-444B-436E-A0E2-65CD1B63A72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C98EDB-444B-436E-A0E2-65CD1B63A72E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3702C387-9E26-4AAA-BC35-0B243F7B7A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3702C387-9E26-4AAA-BC35-0B243F7B7A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3702C387-9E26-4AAA-BC35-0B243F7B7A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3702C387-9E26-4AAA-BC35-0B243F7B7A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E372185-9ED9-003E-6399-958B08A0E108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E372185-9ED9-003E-6399-958B08A0E108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E372185-9ED9-003E-6399-958B08A0E108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E372185-9ED9-003E-6399-958B08A0E108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78AC287B-D34F-7548-6D62-CB7BDF5663AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78AC287B-D34F-7548-6D62-CB7BDF5663AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78AC287B-D34F-7548-6D62-CB7BDF5663AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78AC287B-D34F-7548-6D62-CB7BDF5663AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01178C85-771A-4E8F-9090-CBFAD84C2643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01178C85-771A-4E8F-9090-CBFAD84C2643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01178C85-771A-4E8F-9090-CBFAD84C2643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01178C85-771A-4E8F-9090-CBFAD84C2643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{506712F8-7C55-498E-B735-9125BF7740F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{506712F8-7C55-498E-B735-9125BF7740F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{506712F8-7C55-498E-B735-9125BF7740F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{506712F8-7C55-498E-B735-9125BF7740F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2058C092-B208-4B01-91DA-6AC7F5F4D2C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2058C092-B208-4B01-91DA-6AC7F5F4D2C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2058C092-B208-4B01-91DA-6AC7F5F4D2C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2058C092-B208-4B01-91DA-6AC7F5F4D2C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76DC5E6D-CF20-4154-8AC9-434EEF8E8296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76DC5E6D-CF20-4154-8AC9-434EEF8E8296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76DC5E6D-CF20-4154-8AC9-434EEF8E8296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76DC5E6D-CF20-4154-8AC9-434EEF8E8296}.Release|Any CPU.Build.0 = Release|Any CPU
+		{739F99BD-9F5B-BBDE-BB01-B3D037F44B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{739F99BD-9F5B-BBDE-BB01-B3D037F44B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{739F99BD-9F5B-BBDE-BB01-B3D037F44B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{739F99BD-9F5B-BBDE-BB01-B3D037F44B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{56C98EDB-444B-436E-A0E2-65CD1B63A72E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{3702C387-9E26-4AAA-BC35-0B243F7B7A8F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7E372185-9ED9-003E-6399-958B08A0E108} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{78AC287B-D34F-7548-6D62-CB7BDF5663AF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{01178C85-771A-4E8F-9090-CBFAD84C2643} = {AD59AAEF-143B-4E23-8233-6063D8D9C6F8}
+		{506712F8-7C55-498E-B735-9125BF7740F8} = {945404B8-2D89-412C-B3BE-604782523DF3}
+		{2058C092-B208-4B01-91DA-6AC7F5F4D2C0} = {945404B8-2D89-412C-B3BE-604782523DF3}
+		{76DC5E6D-CF20-4154-8AC9-434EEF8E8296} = {945404B8-2D89-412C-B3BE-604782523DF3}
+		{739F99BD-9F5B-BBDE-BB01-B3D037F44B1F} = {945404B8-2D89-412C-B3BE-604782523DF3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9476F8BF-D123-4972-B02E-CA7BA9884CE2}
+	EndGlobalSection
+EndGlobal

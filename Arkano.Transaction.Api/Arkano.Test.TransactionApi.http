@@ -1,0 +1,6 @@
+@Arkano.Test.TransactionApi_HostAddress = http://localhost:5158
+
+GET {{Arkano.Test.TransactionApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
