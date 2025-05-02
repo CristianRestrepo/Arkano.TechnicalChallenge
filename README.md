@@ -1,4 +1,5 @@
 <b>Proyecto Arkano.challenge</b>
+
 <b>Detalles del proyecto</b>
 <div>
  <p>El proyecto <b>Arkano.Transaction.Api</b> es un Web API implementado con clean architecture y el patrón CQRS. Se encarga de creación de las transacciones en base de datos en un estado <b>Pending</b> que posteriormente son enviadas al topico <b>Transactions</b> del bus. Cuenta con un <b>BackgroudService</b> implementado en la capa de infraestructura que se encarga de consumir y procesar los mensajes entregados al topico <b>Processed-Transactions</b> desde el componente <b>Arkano.Antifraud.Worker</b> y actualizar la transacción en base de datos
