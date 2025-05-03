@@ -8,6 +8,12 @@
   <p>El proyecto <b>Arkano.Antifraud.Worker</b> es un worker que implementa la interfaz IHostedService, también implementado con clean architecture y el patrón CQRS. Este proyecto contiene un backgroundService que consume el topico <b>Transactions</b> del bus y procesa la lógica de validación sobre las transacciones creadas en el proyecto <b>Arkano.Transaction.Api</b> y determina si se rechazan o se aprueban, el resultado de esta validación es enviado al topico <b>Processed-Transactions</b> para que el proyecto <b>Arkano.Transaction.Api</b> actualice las transacciones en base de datos.</p>
 </div>
 
+<b>Razones por las que escogí estos patrones y arquitectura</b>
+- <p>Elegí estructurar el proyecto en capas ya que me pareció una manera fácil y sencilla de separar responsabilidades, una capa de aplicación en donde se maneja la lógica de negocio, una capa de dominio para las entidades y elementos transversales en el proyecto y una capa de infraestructura para conexiones a bases de datos o sistemas externos, en este caso el bus.</p>
+- <p>Implementé el patrón CQRS buscando separar responsabilidades a nivel de lógica, una clase para los procesos transaccionales y otra para las consultas.</p>
+- <p>Ambos proyectos comparten una librería común con entidades, interfaces y la implementación del Producer hacia el bus, pensé en esta librería como un medio para no repetir clases y reutilizar elementos comunes entre ambas soluciones.</p>
+
+
 <b>Arquitectura del proyecto</b>
 
 <img>![Arquitectura drawio](https://github.com/user-attachments/assets/ff3b0ece-2542-4c2d-80f5-792326ef71f0)</img>
