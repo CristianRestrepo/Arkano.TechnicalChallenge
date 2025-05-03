@@ -6,9 +6,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System;
 using System.Text.Json;
-using static System.Formats.Asn1.AsnWriter;
 
 
 namespace Arkano.Antifraud.Infrastructure.Service

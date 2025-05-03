@@ -1,15 +1,7 @@
-using Arkano.Common.Common;
 using Arkano.Common.Consumer;
-using Arkano.Common.Models;
-using Arkano.Transaction.Domain.Common;
-using Arkano.Transaction.Domain.Interfaces;
-using Confluent.Kafka;
-using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using System.Threading;
 
 namespace Arkano.Transaction.Infrastructure.Services;
 

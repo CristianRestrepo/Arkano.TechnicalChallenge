@@ -1,5 +1,4 @@
-﻿using Arkano.Common.Models;
-using Arkano.Common.Producer;
+﻿using Arkano.Common.Producer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;

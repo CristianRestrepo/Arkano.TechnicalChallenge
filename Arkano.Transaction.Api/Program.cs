@@ -1,11 +1,7 @@
-using Microsoft.EntityFrameworkCore;
 using Arkano.Transaction.Application;
 using Arkano.Transaction.Infrastructure;
-using Arkano.Transaction.Domain.Interfaces;
 using System.Reflection;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using Arkano.Common.Models;
-using Microsoft.Extensions.Configuration;
 using Confluent.Kafka;
 using Arkano.Transaction.Infrastructure.Services;
 using System.Text.Json.Serialization;

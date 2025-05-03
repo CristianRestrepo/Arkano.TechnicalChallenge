@@ -1,6 +1,4 @@
 using Arkano.Common.Consumer;
-using MediatR;
-
 namespace Arkano.Worker;
 
 public class AntifraudHostedService : IHostedService

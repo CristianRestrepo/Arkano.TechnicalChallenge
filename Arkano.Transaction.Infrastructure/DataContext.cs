@@ -1,6 +1,5 @@
 ﻿using Arkano.Transaction.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 
 namespace Arkano.Transaction.Infrastructure
