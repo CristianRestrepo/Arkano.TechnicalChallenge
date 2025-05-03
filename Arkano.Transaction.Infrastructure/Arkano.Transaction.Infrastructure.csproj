@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Arkano.Common\Arkano.Common.csproj" />
     <ProjectReference Include="..\Arkano.Entities\Arkano.Common.csproj" />
     <ProjectReference Include="..\Arkano.Transaction.Domain\Arkano.Transaction.Domain.csproj" />
   </ItemGroup>

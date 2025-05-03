@@ -1,4 +1,6 @@
+
 using Arkano.Common.Consumer;
+
 namespace Arkano.Worker;
 
 public class AntifraudHostedService : IHostedService

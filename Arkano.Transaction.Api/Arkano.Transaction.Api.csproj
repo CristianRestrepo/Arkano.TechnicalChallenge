@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Arkano.Application\Arkano.Transaction.Application.csproj" />
+    <ProjectReference Include="..\Arkano.Transaction.Application\Arkano.Transaction.Application.csproj" />
     <ProjectReference Include="..\Arkano.Transaction.Infrastructure\Arkano.Transaction.Infrastructure.csproj" />
   </ItemGroup>
 

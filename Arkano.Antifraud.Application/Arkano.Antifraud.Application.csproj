@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Arkano.Antifraud.Domain\Arkano.Antifraud.Domain.csproj" />
+    <ProjectReference Include="..\Arkano.Common\Arkano.Common.csproj" />
     <ProjectReference Include="..\Arkano.Entities\Arkano.Common.csproj" />
   </ItemGroup>
 
