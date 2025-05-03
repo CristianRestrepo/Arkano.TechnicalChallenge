@@ -28,6 +28,8 @@
   - <b>docker-compose exec kafka kafka-topics --bootstrap-server kafka:9092 --create --topic Processed-Transactions</b>
 - Ejecutar el siguiente comando para ejecutar migraciones y crear base de datos:
   - <b>dotnet ef database update --project Arkano.Transaction.Infrastructure --startup-project Arkano.Transaction.Api</b>
+    - en caso de caso de que la consola indique que no se encuentra el comando, ejecutar:
+      <b>dotnet tool install --global dotnet-ef --version 9.*</b>
  
 - Abrir una segunda terminal y acceder a la ruta del proyecto:
   - En una terminal ejecutar el comando: <b>dotnet run --project Arkano.Transaction.Api</b>
