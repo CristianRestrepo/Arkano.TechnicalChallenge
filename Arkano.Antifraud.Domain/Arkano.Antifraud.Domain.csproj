@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Arkano.Common\Arkano.Common.csproj" />
-    <ProjectReference Include="..\Arkano.Entities\Arkano.Common.csproj" />
   </ItemGroup>
 
 </Project>

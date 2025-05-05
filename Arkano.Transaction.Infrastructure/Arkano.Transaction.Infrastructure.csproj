@@ -21,9 +21,8 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Arkano.Common\Arkano.Common.csproj" />
-    <ProjectReference Include="..\Arkano.Entities\Arkano.Common.csproj" />
+  <ItemGroup>    
+    <ProjectReference Include="..\Arkano.Common\Arkano.Common.csproj" />    
     <ProjectReference Include="..\Arkano.Transaction.Domain\Arkano.Transaction.Domain.csproj" />
   </ItemGroup>
 

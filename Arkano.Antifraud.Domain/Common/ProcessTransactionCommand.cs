@@ -1,4 +1,5 @@
-﻿using Arkano.Common.Models;
+﻿
+using Arkano.Common.Models;
 using MediatR;
 
 namespace Arkano.Antifraud.Domain.Common
