@@ -1,15 +1,10 @@
-﻿using Arkano.Antifraud.Domain.Services;
-using Arkano.Antifraud.Application.Commands;
+﻿using Arkano.Antifraud.Application.Commands;
 using Arkano.Common.Producer;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Arkano.Common.Models;
 using Arkano.Common.Common;
+using Arkano.Antifraud.Domain.Service;
 
 namespace Arkano.Antifraud.Test.Application
 {

@@ -1,11 +1,6 @@
 ﻿using Arkano.Common.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Arkano.Antifraud.Domain.Services
+namespace Arkano.Antifraud.Domain.Service
 {
     public interface IProcessTransaction
     {

@@ -1,22 +1,26 @@
-﻿using Arkano.Antifraud.Domain.Services;
+﻿using Arkano.Antifraud.Domain.Service;
 using Arkano.Common.Common;
 using Arkano.Common.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Moq;
 
 namespace Arkano.Antifraud.Test.Domain
 {
     [TestClass]
     public sealed class ProcessTransactionTest
     {
+        private IAccumulated _accumulated;
+
+        [TestInitialize]
+        public void TestInitialize()
+        {           
+        }
+
         [TestMethod]
         public void ProcessTransaction_ValidTransaction_ShouldProcess()
         {
             // Arrange
-            Accumulated._accumulated = 0;
+            _accumulated = new Accumulated();
+            _accumulated.SetAccumulated(0);
 
             var transaction = new TransactionEvent
             {
@@ -26,18 +30,21 @@ namespace Arkano.Antifraud.Test.Domain
             };
 
             // Act
-            var service = new ProcessTransaction();
+            var service = new ProcessTransaction(_accumulated);
              service.ValidateTransaction(ref transaction);
 
             // Assert
             Assert.AreEqual((int)State.Approved, transaction.IdState);
         }
 
+       
+
         [TestMethod]
         public void ProcessTransaction_InvalidTransaction_ShouldProcess()
         {
             // Arrange
-            Accumulated._accumulated = 0;
+            _accumulated = new Accumulated();
+            _accumulated.SetAccumulated(0);
 
             var transaction = new TransactionEvent
             {
@@ -47,7 +54,7 @@ namespace Arkano.Antifraud.Test.Domain
             };
 
             // Act
-            var service = new ProcessTransaction();
+            var service = new ProcessTransaction(_accumulated);
             service.ValidateTransaction(ref transaction);
 
             // Assert
@@ -58,7 +65,8 @@ namespace Arkano.Antifraud.Test.Domain
         public void ProcessTransaction_InvalidTransactionAccumulate_ShouldProcess()
         {
             // Arrange
-            Accumulated._accumulated = 20000;
+            _accumulated = new Accumulated();
+            _accumulated.SetAccumulated(20000);           
 
             var transaction = new TransactionEvent
             {
@@ -68,7 +76,7 @@ namespace Arkano.Antifraud.Test.Domain
             };
 
             // Act
-            var service = new ProcessTransaction();
+            var service = new ProcessTransaction(_accumulated);
             service.ValidateTransaction(ref transaction);
 
             // Assert
@@ -79,8 +87,10 @@ namespace Arkano.Antifraud.Test.Domain
         public void ProcessTransaction_ValidTransaction_ChangeDate_ShouldProcess()
         {
             // Arrange
-            Accumulated._accumulated = 20000;
-            Accumulated._accumulatedDate = DateTime.Today.AddDays(-1);
+            _accumulated = new Accumulated();
+            _accumulated.SetAccumulated(20000);
+            _accumulated.SetAccumulatedDate(DateTime.Today.AddDays(-1));            
+            
 
             var transaction = new TransactionEvent
             {
@@ -90,7 +100,7 @@ namespace Arkano.Antifraud.Test.Domain
             };
 
             // Act
-            var service = new ProcessTransaction();
+            var service = new ProcessTransaction(_accumulated);
             service.ValidateTransaction(ref transaction);
 
             // Assert
@@ -101,7 +111,8 @@ namespace Arkano.Antifraud.Test.Domain
         public void ProcessTransaction_validTransaction_MultipleTransactionsAccumulated_ShouldProcess()
         {
             // Arrange
-            Accumulated._accumulated = 0;
+            _accumulated = new Accumulated();
+            _accumulated.SetAccumulated(0);
 
             var transaction1 = new TransactionEvent
             {
@@ -117,7 +128,7 @@ namespace Arkano.Antifraud.Test.Domain
             };
 
             // Act
-            var service = new ProcessTransaction();
+            var service = new ProcessTransaction(_accumulated);
             service.ValidateTransaction(ref transaction1);
             service.ValidateTransaction(ref transaction2);
 
@@ -130,7 +141,8 @@ namespace Arkano.Antifraud.Test.Domain
         public void ProcessTransaction_InvalidTransaction_MultipleTransactionsAccumulated_ShouldProcess()
         {
             // Arrange
-            Accumulated._accumulated = 0;
+            _accumulated = new Accumulated();
+            _accumulated.SetAccumulated(0);
 
             var transaction1 = new TransactionEvent
             {
@@ -146,7 +158,7 @@ namespace Arkano.Antifraud.Test.Domain
             };
 
             // Act
-            var service = new ProcessTransaction();
+            var service = new ProcessTransaction(_accumulated);
             service.ValidateTransaction(ref transaction1);
             service.ValidateTransaction(ref transaction2);
 

@@ -1,4 +1,4 @@
-﻿using Arkano.Antifraud.Domain.Services;
+﻿using Arkano.Antifraud.Domain.Service;
 using Arkano.Common.Models;
 using Arkano.Common.Producer;
 using MediatR;

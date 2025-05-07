@@ -4,11 +4,6 @@ using Arkano.Transaction.Application.Transaction.Commands;
 using AutoMapper;
 
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Arkano.Common.Common;
 using Arkano.Common.Models;
 using Arkano.Transaction.Application.Transaction.Dto;

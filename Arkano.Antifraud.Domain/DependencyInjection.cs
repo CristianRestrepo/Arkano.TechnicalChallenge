@@ -1,10 +1,5 @@
-﻿using Arkano.Antifraud.Domain.Services;
+﻿using Arkano.Antifraud.Domain.Service;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Arkano.Antifraud.Domain
 {
@@ -13,6 +8,7 @@ namespace Arkano.Antifraud.Domain
         public static IServiceCollection AddDomain(this IServiceCollection services)
         {
             services.AddTransient<IProcessTransaction, ProcessTransaction>();
+            services.AddSingleton<IAccumulated, Accumulated>();
             return services;
         }
     }
