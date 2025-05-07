@@ -9,7 +9,6 @@ namespace Arkano.Antifraud.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
-
             services.AddScoped<IEventConsumer, EventConsumer>();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));            
             return services;

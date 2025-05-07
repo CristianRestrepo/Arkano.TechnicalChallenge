@@ -16,7 +16,7 @@ namespace Arkano.Transaction.Application.Transaction.Commands
         public int Value { get; set; }
     }
 
-    class CreateTransactionCommandHandler : IRequestHandler<CreateTransactionCommand, TransactionDto>
+    public class CreateTransactionCommandHandler : IRequestHandler<CreateTransactionCommand, TransactionDto>
     {
         private readonly IDataContext _dataContext;
         private readonly IMapper _mapper;

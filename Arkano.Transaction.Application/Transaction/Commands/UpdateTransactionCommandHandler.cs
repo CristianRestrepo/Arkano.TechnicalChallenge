@@ -1,12 +1,15 @@
-﻿using Arkano.Transaction.Domain.Common;
-using Arkano.Transaction.Domain.Interfaces;
-using AutoMapper;
+﻿using Arkano.Transaction.Domain.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace Arkano.Transaction.Application.Transaction.Commands
-{   
+{
+    public record UpdateTransactionCommand : IRequest<Unit>
+    {
+        public Guid Id { get; set; }
+        public int IdState { get; set; }
+    }
 
     public class UpdateTransactionCommandHandler : IRequestHandler<UpdateTransactionCommand, Unit>
     {

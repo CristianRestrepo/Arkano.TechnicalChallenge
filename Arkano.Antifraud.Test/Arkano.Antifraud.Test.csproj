@@ -1,22 +1,22 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="MSTest.Sdk/3.6.4">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <UseVSTest>true</UseVSTest>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Confluent.Kafka" Version="2.10.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+    <PackageReference Include="Moq" Version="4.20.72" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Arkano.Antifraud.Application\Arkano.Antifraud.Application.csproj" />
     <ProjectReference Include="..\Arkano.Antifraud.Domain\Arkano.Antifraud.Domain.csproj" />
+    <ProjectReference Include="..\Arkano.Antifraud.Infraestructure\Arkano.Antifraud.Infrastructure.csproj" />
     <ProjectReference Include="..\Arkano.Common\Arkano.Common.csproj" />
-    
   </ItemGroup>
 
 </Project>

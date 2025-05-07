@@ -1,7 +1,7 @@
 
 using System.Text.Json;
 using Arkano.Common.Models;
-using Arkano.Transaction.Domain.Common;
+using Arkano.Transaction.Application.Transaction.Commands;
 using Confluent.Kafka;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;

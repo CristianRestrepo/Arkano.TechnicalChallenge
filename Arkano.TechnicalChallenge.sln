@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Transaction.Applicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Common", "Arkano.Common\Arkano.Common.csproj", "{526F42E3-ABA3-6471-BE91-0678D55DD219}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Antifraud.Test", "Arkano.Antifraud.Test\Arkano.Antifraud.Test.csproj", "{2BBD2087-24AE-4FD1-9105-43CCD1AE6EE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkano.Transaction.Test", "Arkano.Transaction.Test\Arkano.Transaction.Test.csproj", "{F45AC0B8-0D68-4E2D-AA48-ADF47BCA24FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{526F42E3-ABA3-6471-BE91-0678D55DD219}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{526F42E3-ABA3-6471-BE91-0678D55DD219}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{526F42E3-ABA3-6471-BE91-0678D55DD219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BBD2087-24AE-4FD1-9105-43CCD1AE6EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBD2087-24AE-4FD1-9105-43CCD1AE6EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBD2087-24AE-4FD1-9105-43CCD1AE6EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBD2087-24AE-4FD1-9105-43CCD1AE6EE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F45AC0B8-0D68-4E2D-AA48-ADF47BCA24FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F45AC0B8-0D68-4E2D-AA48-ADF47BCA24FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F45AC0B8-0D68-4E2D-AA48-ADF47BCA24FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F45AC0B8-0D68-4E2D-AA48-ADF47BCA24FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +95,8 @@ Global
 		{739F99BD-9F5B-BBDE-BB01-B3D037F44B1F} = {945404B8-2D89-412C-B3BE-604782523DF3}
 		{4B4A7A6C-B35D-4DE2-721B-4AEFE81FB46D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{526F42E3-ABA3-6471-BE91-0678D55DD219} = {AD59AAEF-143B-4E23-8233-6063D8D9C6F8}
+		{2BBD2087-24AE-4FD1-9105-43CCD1AE6EE7} = {945404B8-2D89-412C-B3BE-604782523DF3}
+		{F45AC0B8-0D68-4E2D-AA48-ADF47BCA24FB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9476F8BF-D123-4972-B02E-CA7BA9884CE2}

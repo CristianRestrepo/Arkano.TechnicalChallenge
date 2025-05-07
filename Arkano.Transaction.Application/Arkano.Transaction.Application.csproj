@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Arkano.Common\Arkano.Common.csproj" />
     <ProjectReference Include="..\Arkano.Transaction.Domain\Arkano.Transaction.Domain.csproj" />
-    <ProjectReference Include="..\Arkano.Transaction.Infrastructure\Arkano.Transaction.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

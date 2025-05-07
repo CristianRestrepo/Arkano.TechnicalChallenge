@@ -1,4 +1,4 @@
-using Arkano.Antifraud.Domain.Common;
+using Arkano.Antifraud.Application.Commands;
 using Arkano.Common.Consumer;
 using Arkano.Common.Models;
 using Confluent.Kafka;
@@ -15,8 +15,6 @@ namespace Arkano.Antifraud.Infrastructure.Service
     {
         private readonly ILogger<EventConsumer> _logger;
         private readonly ConsumerConfig _config;
-        private DateTime _accumulatedDate;
-        private int _accumulated;
         private readonly IServiceScopeFactory _scopeFactory;
 
         public EventConsumer(
@@ -35,9 +33,6 @@ namespace Arkano.Antifraud.Infrastructure.Service
         {
             try
             {
-                _accumulatedDate = DateTime.Today;
-                _accumulated = 0;
-
                 using var consumer = new ConsumerBuilder<string, string>(_config)
                        .SetKeyDeserializer(Deserializers.Utf8)
                        .SetValueDeserializer(Deserializers.Utf8)
@@ -62,15 +57,12 @@ namespace Arkano.Antifraud.Infrastructure.Service
                     {
                         throw new ArgumentNullException("Message could not be processed");
                     }
-
-
-                    AddValue(@event.Value);
+                                       
                     using var scope = _scopeFactory.CreateScope();
                     var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
                     await mediator.Send(new ProcessTransactionCommand()
                     {
                         Event = @event,
-                        Accumulated = _accumulated
                     });
 
                     _logger.LogInformation($"Message received {consumeResult.Message.Value}");
@@ -98,19 +90,6 @@ namespace Arkano.Antifraud.Infrastructure.Service
                 _logger.LogError(ex, "Error processing Message");
                 throw;
             }
-        }
-
-        private void AddValue(int value)
-        {
-            if (_accumulatedDate.Date.Equals(DateTime.Today.Date))
-            {
-                _accumulated += value;
-            }
-            else
-            {
-                _accumulatedDate = DateTime.Today;
-                _accumulated = value;
-            }
-        }
+        }        
     }
 }
